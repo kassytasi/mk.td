@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pago Rechazado - Numerología Pro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#2563eb", // Primary blue from the reference
+              "background-light": "#f8fafc",
+              "background-dark": "#0a0c14",
+              "card-dark": "#121624",
+              "border-dark": "#1e293b",
+              "error-red": "#ef4444"
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+              sans: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.75rem",
+            },
+          },
+        },
+      };
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .status-bar {
+            height: env(safe-area-inset-top, 20px);
+        }
+        .error-shake {
+            animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+        }
+        @keyframes shake {
+            10%, 90% { transform: translate3d(-1px, 0, 0); }
+            20%, 80% { transform: translate3d(2px, 0, 0); }
+            30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+            40%, 60% { transform: translate3d(4px, 0, 0); }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="status-bar w-full bg-transparent"></div>
+<header class="px-6 py-4 flex items-center justify-between border-b border-slate-200 dark:border-border-dark bg-white/50 dark:bg-card-dark/50 backdrop-blur-md sticky top-0 z-50">
+<button class="flex items-center text-slate-600 dark:text-slate-400">
+<span class="material-icons text-[20px]">chevron_left</span>
+<span class="text-sm font-medium">Volver</span>
+</button>
+<div class="flex items-center gap-1">
+<span class="material-icons text-primary text-[20px]">stars</span>
+<span class="font-bold tracking-tight text-lg">Numerología<span class="text-primary">Pro</span></span>
+</div>
+<div class="w-10"></div> 
+</header>
+<main class="max-w-md mx-auto px-5 pt-8 pb-20">
+<div class="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-900/30 rounded-2xl p-6 mb-8 text-center error-shake">
+<div class="w-12 h-12 bg-red-100 dark:bg-red-900/40 rounded-full flex items-center justify-center mx-auto mb-4">
+<span class="material-icons text-error-red">close</span>
+</div>
+<h1 class="text-xl font-bold text-red-700 dark:text-red-400 mb-2">Pago rechazado</h1>
+<p class="text-sm text-red-600 dark:text-red-300/80 leading-relaxed">
+                La transacción no pudo ser completada por su entidad bancaria. Por favor, verifique sus datos o intente con otro medio.
+            </p>
+</div>
+<div class="mb-6">
+<h2 class="text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-4">Detalles del Pago</h2>
+</div>
+<div class="bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark rounded-2xl p-5 mb-8">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-semibold text-slate-800 dark:text-slate-200">Lectura Premium</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400">Análisis completo + 12 meses</p>
+</div>
+<span class="font-bold text-lg">$49.99</span>
+</div>
+<div class="border-t border-slate-100 dark:border-border-dark pt-4 space-y-2">
+<div class="flex justify-between text-xs text-slate-500 dark:text-slate-400">
+<span>Subtotal</span>
+<span>$42.01</span>
+</div>
+<div class="flex justify-between text-xs text-slate-500 dark:text-slate-400">
+<span>IVA (19%)</span>
+<span>$7.98</span>
+</div>
+</div>
+</div>
+<div class="space-y-6">
+<div class="grid grid-cols-3 gap-3 mb-6">
+<button class="flex flex-col items-center justify-center p-4 rounded-xl border-2 border-primary bg-primary/5 dark:bg-primary/10">
+<span class="material-icons text-primary mb-1">credit_card</span>
+<span class="text-[10px] font-bold uppercase text-primary">Tarjeta</span>
+</button>
+<button class="flex flex-col items-center justify-center p-4 rounded-xl border border-slate-200 dark:border-border-dark bg-white dark:bg-card-dark opacity-60">
+<span class="material-icons text-slate-400 mb-1">account_balance</span>
+<span class="text-[10px] font-bold uppercase text-slate-500">PSE</span>
+</button>
+<button class="flex flex-col items-center justify-center p-4 rounded-xl border border-slate-200 dark:border-border-dark bg-white dark:bg-card-dark opacity-60">
+<span class="material-icons text-slate-400 mb-1">payments</span>
+<span class="text-[10px] font-bold uppercase text-slate-500">PayPal</span>
+</button>
+</div>
+<div class="space-y-4">
+<div>
+<label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-2 px-1">Número de tarjeta</label>
+<div class="relative">
+<input class="w-full bg-red-50 dark:bg-red-950/20 border-2 border-error-red rounded-xl px-4 py-3.5 text-slate-900 dark:text-white focus:outline-none" readonly="" type="text" value="4242 4242 4242 4242"/>
+<span class="material-icons absolute right-4 top-1/2 -translate-y-1/2 text-error-red">error_outline</span>
+</div>
+<p class="text-[11px] text-error-red mt-2 px-1">Verifique los números de su tarjeta e intente de nuevo.</p>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-2 px-1">Expiración</label>
+<input class="w-full bg-slate-100 dark:bg-card-dark border border-slate-200 dark:border-border-dark rounded-xl px-4 py-3.5 text-slate-900 dark:text-white" placeholder="MM/YY" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-2 px-1">CVC</label>
+<input class="w-full bg-slate-100 dark:bg-card-dark border border-slate-200 dark:border-border-dark rounded-xl px-4 py-3.5 text-slate-900 dark:text-white" placeholder="***" type="password"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 space-y-4">
+<button class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-4 rounded-2xl transition-all active:scale-95 flex items-center justify-center gap-2 shadow-lg shadow-primary/20">
+<span>Reintentar Pago</span>
+<span class="material-icons text-[18px]">refresh</span>
+</button>
+<button class="w-full bg-slate-200 dark:bg-white/10 hover:bg-slate-300 dark:hover:bg-white/20 text-slate-700 dark:text-white font-semibold py-4 rounded-2xl transition-all active:scale-95">
+                Intentar con otro método
+            </button>
+</div>
+<div class="mt-12 flex flex-col items-center justify-center opacity-60">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-icons text-green-500 text-sm">verified_user</span>
+<span class="text-[10px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Pago Seguro SSL Encriptado</span>
+</div>
+<p class="text-[10px] text-slate-400 dark:text-slate-500 text-center px-10">
+                Sus datos están protegidos por estándares de seguridad de nivel bancario (AES-256).
+            </p>
+</div>
+</main>
+<div class="fixed bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-background-light dark:from-background-dark to-transparent pointer-events-none"></div>
+<div class="h-6 w-full bg-background-light dark:bg-background-dark"></div>
+
+</body></html>
